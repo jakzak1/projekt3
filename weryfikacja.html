@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weryfikacja wieku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        #age-check {
+            margin-top: 20%;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+        }
+        .yes {
+            background: #4CAF50;
+            color: white;
+        }
+        .no {
+            background: #FF0000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="age-check">
+        <h1>⚠️ Weryfikacja wieku</h1>
+        <p>Czy masz ukończone 18 lat?</p>
+        <button class="yes" onclick="verifyAge(true)">Tak</button>
+        <button class="no" onclick="verifyAge(false)">Nie</button>
+    </div>
+
+    <script>
+        function verifyAge(isAdult) {
+            if (isAdult) {
+                // Przekierowanie do sklepu
+                window.location.href = "Stronaglowna.html";
+            } else {
+                alert("Musisz mieć ukończone 18 lat, aby wejść na tę stronę.");
+                window.location.href = "https://google.com";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
